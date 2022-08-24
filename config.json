@@ -1,0 +1,23 @@
+{
+  "mod": "post",
+  "cron": "0 30 6 * * ?",
+  "love_start_date": "2016-09-21",
+  "birth_date": "02-17",
+  "wechat_official": {
+    "app_id": "wxf1dd5fc1e900d1fb",
+    "app_secret": "7a5efebc2cdac9f43fe572cdae93d18b",
+    "open_ids": [
+      "o8xAq6-qagymJpkue8UbMoUuNzDg",
+      "o8xAq6ws226yi6ullBwOlcs-c8To"
+    ],
+    "template_id": "RqAWWagYy-AEKd5f-okHeUShcQ3tD1rzVEK81XSWg9k"
+  },
+  "yiketianqi": {
+    "appid": "92691868",
+    "appsecret": "UakmSW7j",
+    "cityid": "101010100"
+  },
+  "colors": {
+    "qinghua": "#FF2400"
+  }
+}
