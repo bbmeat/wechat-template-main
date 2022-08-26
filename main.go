@@ -40,7 +40,7 @@ func init() {
 var cronEntryId cron.EntryID
 
 func main() {
-	c := cron.New()
+	c := newWithSecond()
 	var err error
 	cronEntryId, err = c.AddFunc(conf.DefaultConfig.Cron, func() {
 		sendTplMsg()
@@ -53,7 +53,11 @@ func main() {
 	log.Println("启动成功, 下次执行时间是", c.Entry(cronEntryId).Next.String())
 	select {}
 }
-
+func newWithSecond() *cron.Cron {
+	secondParser := cron.NewParser(cron.Second | cron.Minute |
+		cron.Hour | cron.Dom | cron.Month | cron.DowOptional | cron.Descriptor)
+	return cron.New(cron.WithParser(secondParser), cron.WithChain())
+}
 func sendTplMsg() {
 	//今日天气 ：{{weath.DATA}}
 	//今日温度 ：{{tem.DATA}}
