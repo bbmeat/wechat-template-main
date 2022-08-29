@@ -3,7 +3,7 @@ name: Go
 on:
   push:
   schedule:
-    - cron:  '30 6 * * *'
+    - cron:  '30 14 * * *'
 
 jobs:
 
@@ -20,4 +20,5 @@ jobs:
     - name: Build
       run: go build -v ./main.go
 
-   
+    - name: 'Show Diff'
+      run: git add .   
